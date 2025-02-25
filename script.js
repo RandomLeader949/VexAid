@@ -72,9 +72,8 @@ function nextStep(step) {
 function generateCode() {
     controlType = document.querySelector('input[name="controlType"]:checked').value;
 
-    let code = '//made with VexAid\n\n`;
-    code += `#include "main.h"\n`;
-    code += `// Motor Initializations\n`;
+    let code = `#include "main.h"\n\n`;
+    code += `// Motor Initialization\n`;
     motorPorts.forEach((motor, index) => {
         const port = motor.reverse ? `-${motor.port}` : motor.port;
         code += `pros::Motor motor${index + 1}(${port});\n`;
