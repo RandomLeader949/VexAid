@@ -135,7 +135,7 @@ function generateCode() {
         code += `        } else {\n`;
         code += `            other${index + 1}.move(0);\n`;
         code += `        }\n`;
-        code += `//made using VexAid
+        code += `//made using VexAid`;
     });
 
     code += `        pros::delay(20);\n`;
