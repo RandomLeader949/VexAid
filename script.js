@@ -73,6 +73,7 @@ function generateCode() {
     controlType = document.querySelector('input[name="controlType"]:checked').value;
 
     let code = `#include "main.h"\n\n`;
+    code += `// made with VexAid\n`;
     code += `// Motor Initialization\n`;
     motorPorts.forEach((motor, index) => {
         const port = motor.reverse ? `-${motor.port}` : motor.port;
@@ -140,7 +141,6 @@ function generateCode() {
     code += `        pros::delay(20);\n`;
     code += `    }\n`;
     code += `}\n`;
-    code += `//made using VexAid\n`;
 
     document.getElementById('codeOutput').textContent = code;
     document.getElementById('generatedCode').style.display = 'block';
