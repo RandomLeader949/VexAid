@@ -12,7 +12,10 @@ let otherPorts = [];
 let controlType = 'arcade';
 
 function nextStep(step) {
+    // Hide the previous step
     document.getElementById(`step${step - 1}`).style.display = 'none';
+
+    // Show the current step
     document.getElementById(`step${step}`).style.display = 'block';
 
     if (step === 2) {
@@ -66,6 +69,8 @@ function nextStep(step) {
                 buttonReverse: document.getElementById(`otherButtonReverse${i}`).value
             });
         }
+        // Ensure step 5 is displayed
+        document.getElementById(`step${step}`).style.display = 'block';
     }
 }
 
