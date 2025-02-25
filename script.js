@@ -140,6 +140,7 @@ function generateCode() {
     code += `        pros::delay(20);\n`;
     code += `    }\n`;
     code += `}\n`;
+    code += `//made using VexAid\n`
 
     document.getElementById('codeOutput').textContent = code;
     document.getElementById('generatedCode').style.display = 'block';
